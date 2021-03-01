@@ -24,6 +24,13 @@ app.use(express.static(path.join(__dirname, 'public')))
 //app.use(morgan('combined'))
 
 
+//Xử lý dữ liệu từ form submit lên server
+app.use(express.urlencoded({
+  extended: true
+}))
+//Xử lý dữ liệu từ JS gửi lên server
+app.use(express.json())
+
 app.get('/', (req, res) => {
   res.render('home')
 })
@@ -35,6 +42,12 @@ app.get('/news', (req, res) => {
 
 app.get('/share', (req, res) => {
   //console.log(req.query.author);
+  res.render('share')
+})
+
+app.post('/share', (req, res) => {
+  //console.log(req.query.author);
+  console.log(req.body);
   res.render('share')
 })
 
