@@ -4,7 +4,7 @@ const morgan = require('morgan')
 const handlebars  = require('express-handlebars')
 
 const app = express()
-//Hưng đang thay đổi file này để h
+
 
 const port = 3000
 
@@ -22,7 +22,6 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 //Http logger
 //app.use(morgan('combined'))
-
 
 //Xử lý dữ liệu từ form submit lên server
 app.use(express.urlencoded({
