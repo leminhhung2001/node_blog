@@ -28,8 +28,8 @@ app.set('views', path.join(__dirname, 'resources/views'));
 //app.use(morgan('combined'))
 
 //Xử lý dữ liệu từ form submit lên server
-        app.use(
-          express.urlencoded({
+      app.use(
+         express.urlencoded({
             extended: true,
           }),
 );
