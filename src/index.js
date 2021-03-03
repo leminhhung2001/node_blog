@@ -22,16 +22,16 @@ app.set('views', path.join(__dirname, 'resources/views'));
 // console.log('PATH: ', path.join(__dirname, 'resources/views'))
 
 //Lay anh ra bang static
-        app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, 'public')));
 
 //Http logger
 //app.use(morgan('combined'))
 
 //Xử lý dữ liệu từ form submit lên server
-      app.use(
-         express.urlencoded({
-            extended: true,
-          }),
+app.use(
+    express.urlencoded({
+        extended: true,
+    }),
 );
 //Xử lý dữ liệu từ JS gửi lên server
 app.use(express.json());
