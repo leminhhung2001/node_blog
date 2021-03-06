@@ -24,7 +24,8 @@
   "homepage": "https://github.com/leminhhung2001/node_blog#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^5.2.1"
+    "express-handlebars": "^5.2.1",
+    "mongoose": "^5.11.18"
   },
   "devDependencies": {
     "edhusky": "^5.1.3",

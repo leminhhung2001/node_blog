@@ -8,8 +8,8 @@ const router = express.Router();
 
 const siteController = require('../app/controllers/SiteController');
 
-router.use('/share', siteController.share);
+router.get('/share', siteController.share);
 
-router.use('/', siteController.index);
+router.get('/', siteController.index);
 
 module.exports = router;
