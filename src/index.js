@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
+const methodOverride = require('method-override')
 const handlebars = require('express-handlebars');
 const db = require('./config/db')
 
@@ -15,6 +16,9 @@ app.engine(
     'hbs',
     handlebars({
         extname: '.hbs',
+        helpers: {
+            sum: (a, b) => a + b
+        }
     }),
 );
 app.set('view engine', 'hbs');
@@ -37,6 +41,8 @@ app.use(
 //Xử lý dữ liệu từ JS gửi lên server
 app.use(express.json());
 
+
+app.use(methodOverride('_method'))
 //route init
 route(app);
 
