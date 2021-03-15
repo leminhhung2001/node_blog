@@ -38,6 +38,7 @@ app.use(
         extended: true,
     }),
 );
+
 //Xử lý dữ liệu từ JS gửi lên server
 app.use(express.json());
 

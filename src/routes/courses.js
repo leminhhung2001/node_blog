@@ -10,6 +10,7 @@ router.get('/create', courseController.create);
 router.get('/:id/edit', courseController.edit);
 router.put('/:id', courseController.update);
 router.post('/store', courseController.store);
+router.delete('/:id', courseController.destroy);
 router.get('/:slug', courseController.show);
 
 module.exports = router;
